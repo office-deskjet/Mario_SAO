@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Mario_SAO)(type KiCad)(uri ${KIPRJMOD}/Mario_SAO.pretty)(options "")(descr ""))
+)
