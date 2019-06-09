@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 183)
-    (tracks 0)
+    (tracks 4)
     (zones 0)
     (modules 11)
     (nets 9)
@@ -34,11 +34,14 @@
   )
 
   (setup
-    (last_trace_width 0.25)
-    (trace_clearance 0.2)
+    (last_trace_width 0.254)
+    (user_trace_width 0.1524)
+    (user_trace_width 0.2032)
+    (user_trace_width 0.254)
+    (trace_clearance 0.1524)
     (zone_clearance 0.508)
     (zone_45_only no)
-    (trace_min 0.2)
+    (trace_min 0.1524)
     (via_size 0.8)
     (via_drill 0.4)
     (via_min_size 0.4)
@@ -101,8 +104,8 @@
   (net 8 "Net-(X1-Pad4)")
 
   (net_class Default "This is the default net class."
-    (clearance 0.2)
-    (trace_width 0.25)
+    (clearance 0.1524)
+    (trace_width 0.1524)
     (via_dia 0.8)
     (via_drill 0.4)
     (uvia_dia 0.3)
@@ -117,7 +120,7 @@
     (add_net VCC)
   )
 
-  (module Mario_SAO:Badgelife-SAOv169-SAO-2x3 (layer F.Cu) (tedit 5CFCB004) (tstamp 5CFD1A2A)
+  (module Mario_SAO:Badgelife-SAOv169-SAO-2x3 (layer F.Cu) (tedit 5CFCB004) (tstamp 5CFD3343)
     (at 108.75 121.25)
     (descr "Through hole straight IDC box header, 2x03, 2.54mm pitch, double rows")
     (tags "Through hole IDC box header THT 2x03 2.54mm double row")
@@ -895,4 +898,20 @@
   (gr_line (start 92.252684 132.491508) (end 92.252684 132.491508) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 92.252684 132.491508) (end 92.252684 132.491508) (layer Edge.Cuts) (width 0.1))
 
+  (segment (start 96.25 120.275) (end 96.75 119.775) (width 0.254) (layer B.Cu) (net 1))
+  (segment (start 96.25 123.2) (end 96.25 120.275) (width 0.254) (layer B.Cu) (net 1))
+  (segment (start 99.025 120) (end 96.75 117.725) (width 0.254) (layer B.Cu) (net 4))
+  (segment (start 106.27 120) (end 99.025 120) (width 0.254) (layer B.Cu) (net 4))
+
+  (zone (net 0) (net_name "") (layer B.Cu) (tstamp 0) (hatch full 0.508)
+    (connect_pads (clearance 0.508))
+    (min_thickness 0.254)
+    (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+    (fill (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy 96 130) (xy 96 125) (xy 93.5 125) (xy 93.5 130)
+      )
+    )
+  )
 )
