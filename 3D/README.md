@@ -1,4 +1,4 @@
-##3D Notes
+## 3D Notes
 
 ### Inkscape
 Remove all other layers but edge cuts.   
